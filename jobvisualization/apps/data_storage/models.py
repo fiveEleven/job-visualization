@@ -3,7 +3,8 @@ from django.db import models
 class ReadOnly(models.Model):
 	num_jobs = models.IntegerField()
 	city_name = models.TextField()
-	state = models.TextField()
+	stateName = models.TextField()
+	stateAbbreviation = models.TextField()
 	latitude = models.FloatField()
 	longitude = models.FloatField()
 	job_title = models.TextField()
@@ -14,7 +15,8 @@ class ReadOnly(models.Model):
 class WriteOnly(models.Model):
 	num_jobs = models.IntegerField()
 	city_name = models.TextField()
-	state = models.TextField()
+	stateName = models.TextField()
+	stateAbbreviation = models.TextField()
 	latitude = models.FloatField()
 	longitude = models.FloatField()
 	job_title = models.TextField()

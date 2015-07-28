@@ -13,7 +13,8 @@ def updateBase():
 		WriteOnly.objects.create(
 			num_jobs = result['numJobs'],
 			city_name = result['name'],
-			state = result['stateName'],
+			stateName = result['stateName'],
+			stateAbbreviation = result['stateAbbreviation'],
 			latitude = result['latitude'],
 			longitude = result['longitude'],
 			job_title = "Front End",
@@ -25,10 +26,11 @@ def updateBase():
 		WriteOnly.objects.create(
 			num_jobs = result['numJobs'],
 			city_name = result['name'],
-			state = result['stateName'],
+			stateName = result['stateName'],
+			stateAbbreviation = result['stateAbbreviation'],
 			latitude = result['latitude'],
 			longitude = result['longitude'],
-			job_title = "Back End",
+			job_title = "Front End",
 			created_at = datetime.now()
 		)
 
@@ -37,10 +39,11 @@ def updateBase():
 		WriteOnly.objects.create(
 			num_jobs = result['numJobs'],
 			city_name = result['name'],
-			state = result['stateName'],
+			stateName = result['stateName'],
+			stateAbbreviation = result['stateAbbreviation'],
 			latitude = result['latitude'],
 			longitude = result['longitude'],
-			job_title = "Full Stack",
+			job_title = "Front End",
 			created_at = datetime.now()
 		)
 	return True
