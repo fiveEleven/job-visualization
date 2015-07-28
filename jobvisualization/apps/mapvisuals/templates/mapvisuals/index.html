@@ -1,0 +1,25 @@
+<!-- Added echoing  of job title, number of jobs, and city name, -->
+<html>
+	<head>
+		<title>Map Visualizations</title>
+		<style>
+		h1, h2,h3,h4,h5,h6{
+			font-family: sans-serif;
+			font-weight: 200;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h1>Map Visualizations</h1>
+				<h1>Five Eleven</h1>
+			</div>
+			{% for object in info %}
+				<h3>{{object.job_title}}</h3>
+				<h2>{{object.city_name}}</h2>
+				<h5>Job Count: {{object.num_jobs}}</h5>
+			{% endfor %}
+		</div>
+	</body>
+</html>
