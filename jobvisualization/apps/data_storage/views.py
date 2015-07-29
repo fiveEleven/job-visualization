@@ -21,6 +21,8 @@ def updateBase():
 			created_at = datetime.now()
 		)
 
+	print "Added Front end results"
+
 	results = City.job_query("Back End")
 	for result in results:
 		WriteOnly.objects.create(
@@ -30,9 +32,10 @@ def updateBase():
 			stateAbbreviation = result['stateAbbreviation'],
 			latitude = result['latitude'],
 			longitude = result['longitude'],
-			job_title = "Front End",
+			job_title = "Back End",
 			created_at = datetime.now()
 		)
+	print "Added Backend results"
 
 	results = City.job_query("Full Stack")
 	for result in results:
@@ -43,9 +46,10 @@ def updateBase():
 			stateAbbreviation = result['stateAbbreviation'],
 			latitude = result['latitude'],
 			longitude = result['longitude'],
-			job_title = "Front End",
+			job_title = "Full Stack",
 			created_at = datetime.now()
 		)
+	print "added fullstack"
 	return True
 
 updateBase()
