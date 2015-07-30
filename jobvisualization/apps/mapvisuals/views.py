@@ -1,5 +1,6 @@
 from apps.data_storage.models import WriteOnly
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+
 import json
 from django.shortcuts import render
 
@@ -44,6 +45,25 @@ def toGeo(request):
 	return HttpResponse(json.dumps(data), content_type='application/json')
 
 
+<<<<<<< HEAD:apps/mapvisuals/views.py
+def statedata(request):
+	GeoJson = open('/Users/new/Desktop/webdev/Coding Dojo /Group_project/job-visualization/apps/mapvisuals/states.json')
+	CityData = WriteOnly.objects.all()
+	AllStates = json.load(GeoJson)
+	
+	for state in AllStates['features']:
+	  for city in CityData:
+	     if city.stateName == state['properties']['name']:
+	        if 'numJobs' in state['properties']:
+	           print 'exists'
+	           state['properties']['numJobs'] += city.num_jobs
+	        else:
+	           print 'not exists'
+	           state['properties']['numJobs'] = city.num_jobs
+	           
+	GeoJson = json.dumps(AllStates)
+	return HttpResponse(GeoJson , content_type='application/json')
+=======
 def jensload(request):
 	return render(request, 'mapvisuals/jens.html')
 
@@ -71,3 +91,4 @@ def jens(request):
 		results.append(data)
 
 	return HttpResponse(json.dumps(results), content_type='application/json')
+>>>>>>> 07a527bd62eb29ab0b8568b85d02c98e78dc414f:jobvisualization/apps/mapvisuals/views.py
