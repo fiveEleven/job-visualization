@@ -42,3 +42,32 @@ def toGeo(request):
 	data = toGeoJson(data)
 
 	return HttpResponse(json.dumps(data), content_type='application/json')
+
+
+def jensload(request):
+	return render(request, 'mapvisuals/jens.html')
+
+def jens(request):
+	cities = WriteOnly.objects.filter(job_title ="Front End")[:10]
+
+	cityList = list()
+	for city in cities:
+		cityList.append(city.city_name)
+
+	totalFront = WriteOnly.objects.filter(job_title = "Front End", city_name__in =cityList).order_by('city_name')
+	totalBack = WriteOnly.objects.filter(job_title = "Back End", city_name__in =cityList).order_by('city_name')
+	totalFull = WriteOnly.objects.filter(job_title = "Full Stack", city_name__in =cityList).order_by('city_name')
+	
+	results = list()
+	for x in range(0, 10):
+		data = {
+			'State': cityList[x], 
+			'freq': {
+				'Front': totalFront[x].num_jobs,
+				'Back': totalBack[x].num_jobs,
+				'Full': totalFull[x].num_jobs,
+			},
+		}
+		results.append(data)
+
+	return HttpResponse(json.dumps(results), content_type='application/json')
