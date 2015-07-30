@@ -7,7 +7,6 @@ WriteOnly.objects.all().delete()
 
 def updateBase():
 	print "updateBase"
-	WriteOnly.objects.all().delete()
 	results = City.job_query("Front End")
 	for result in results:
 		WriteOnly.objects.create(
@@ -49,7 +48,7 @@ def updateBase():
 			job_title = "Full Stack",
 			created_at = datetime.now()
 		)
-	print "added fullstack"
+	print "Added Fullstack results"
 	return True
 
 updateBase()

@@ -32,7 +32,7 @@ def job_query(job_title):
 	    "t.p": "39545",
 	    "t.k": "duKPqWBTqAM",
 	    "action": "jobs-stats",
-	    "jt": job_title,
+	    "q": job_title,
 	    "returnCities": True,
 	    "returnJobTitles": True,
 	    "userip": json.loads(urlopen("http://ip.jsontest.com/").read().decode('utf-8'))['ip'],
