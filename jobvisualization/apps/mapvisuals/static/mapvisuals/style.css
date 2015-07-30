@@ -1,8 +1,83 @@
-*{
+*
+{
 	font-weight: 300;
 	font-family: sans-serif;
 }
-#header{
-	background-color: #00bcd4;
-	
+/*#main
+{
+	background: url('./images/lights.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}*/
+h1, h3
+{
+	text-align: center;
+	color: white;
+/*	text-shadow: 3px 3px 3px #000;
+	margin: 0px;*/
+}
+#main
+{
+	background-color:#394F73;
+}
+path {  stroke: #fff; }
+path:hover {  opacity:0.9; }
+rect:hover {  fill:blue; }
+.axis {  font: 10px sans-serif; }
+.legend tr{    border-bottom:1px solid grey; }
+.legend tr:first-child{    border-top:1px solid grey; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+.legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+.legendFreq, .legendPerc{
+    align:right;
+    width:50px;
+}
+#map 
+{
+	width: 960px;
+	height: 500px;
+}
+svg 
+{
+	position: relative;
+}
+path:hover 
+{
+	fill-opacity: 0;
+	transition: all 0.5s ease;
+}
+.container
+{			
+	margin-top: 20px;
+}
+.point
+{
+	fill-opacity: .9;
+}
+.tooltip
+{
+	max-width: 100px;
+	font-size: 0.8em;
+	background-color: rgba(220, 220, 220, 0.9);
+	padding: 5px;
+	border-radius: 2px;
 }
