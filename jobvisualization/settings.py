@@ -12,9 +12,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-# import dj_database_url
+import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
