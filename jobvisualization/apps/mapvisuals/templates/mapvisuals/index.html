@@ -42,31 +42,42 @@
     	$('ul.tabs').tabs('select_tab', 'test1,test2,test3');
   	});
 	</script>
+	<link rel="stylesheet" href="{% static '../../static/mapvisuals/css/style.css' %}">
 </head>
 <body>
-<div class="row" id = 'main'>
-	<div class="col s12">
-	<div class="container" id='mid'>
-		<div class="row">
-		<h1>FiveEleven Cohort</h1>
-		<hr>
+<div class="container">
+	<div class="row">
+		<div class="col s12" id='nav'>
+			<h4>fiveEleven</h4>
+			<h6>Developer Job Visualizations</h6>
+			<div class="ribbon right black">
+			  <a href="https://github.com/fiveEleven/job-visualization" target='_blank'>Fork me on GitHub</a>
+			</div>
 		</div>
-		<div class="row">
-		   	<div class="col s12 m8 l9">
-		   	  <div class="row">
-			      <ul class="tabs">
-			        <li class="tab col s3"><a href="#tab1">Map 1</a></li>
-			        <li class="tab col s3"><a href="#tab2">Map 2</a></li>
-			        <li class="tab col s3"><a href="#tab3">Map 3</a></li>
-			      </ul>
-			    <div id="tab1" class="col s12">
-			    	<div id ='graph' ng-app="app" class="container" ng-controller="MapController as main">
- 						<leaflet event-broadcast="events" defaults="defaults" center="center" height="600px" width="1200px">
- 						<div class="tooltip"></div>
- 						</leaflet>
-    				</div>
-			    </div>
-			    <div id="tab2" class="col s12">
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="col s12 m12 l12">
+				<ul class="tabs">
+		        	<li class="tab col s3"><a href="#tab1">Heat Point</a></li>
+		        	<li class="tab col s3"><a href="#tab2">Charts by City</a></li>
+		        	<li class="tab col s3"><a href="#tab3">Salary Gauge</a></li>
+			    </ul>
+			</div>
+		</div>
+		
+	</div>
+</div>
+	<div id="tab1" class="col s12 m10 offset-s1 page-wrap">
+		<div id ='graph' ng-app="app" class="container" ng-controller="MapController as main">
+				<leaflet event-broadcast="events" defaults="defaults" center="center" height="600px" width="1200px">
+				<div class="tooltip"></div>
+				</leaflet>
+		</div>
+	</div>
+			    <div id="tab2" class="col s12 page-wrap">
 					{% for result in results%}
 					<p>{{result}}</p>
 					{%endfor%}
@@ -293,5 +304,17 @@
 	</div>
 	</div>
 </div>
+<footer class="site-footer">
+  <div class="container">
+  	<div class="row">
+  		<div class="col s12 m6">
+  			<div class="section" style='padding-top: 10px'>
+  				<a href='http://www.glassdoor.com/index.htm'>Data from <img src='http://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
+  			</div>
+  			
+  		</div>
+  	</div>
+  </div>
+</footer>
 </body>
 </html>

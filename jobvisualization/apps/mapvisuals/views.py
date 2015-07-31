@@ -45,7 +45,7 @@ def toGeo(request):
 	return HttpResponse(json.dumps(data), content_type='application/json')
 
 def statedata(request):
-	GeoJson = open('/Users/m_wright_19/Documents/Group_Project/job-visualization/jobvisualization/apps/mapvisuals/states.json')
+	GeoJson = open('/Users/nick/Documents/Coding Dojo/projects/job-visualization/job-visualization/jobvisualization/apps/mapvisuals/states.json')
 	CityData = WriteOnly.objects.all()
 	AllStates = json.load(GeoJson)
 	
