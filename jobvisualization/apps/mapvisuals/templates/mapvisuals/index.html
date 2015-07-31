@@ -60,7 +60,7 @@
 			        <li class="tab col s3"><a href="#tab3">Map 3</a></li>
 			      </ul>
 			    <div id="tab1" class="col s12">
-			    	<div ng-app="app" class="container" ng-controller="MapController as main">
+			    	<div id ='graph' ng-app="app" class="container" ng-controller="MapController as main">
  						<leaflet event-broadcast="events" defaults="defaults" center="center" height="600px" width="1200px">
  						<div class="tooltip"></div>
  						</leaflet>
@@ -83,7 +83,7 @@
 				    // function to handle histogram.
 				    function histoGram(fD){
 				        var hG={},    hGDim = {t: 60, r: 0, b: 30, l: 0};
-				        hGDim.w = 500 - hGDim.l - hGDim.r, 
+				        hGDim.w = 800 - hGDim.l - hGDim.r, 
 				        hGDim.h = 300 - hGDim.t - hGDim.b;
 				            
 				        //create svg for histogram.
@@ -289,22 +289,6 @@
 			    <div id="tab3" class="col s12">Test 3</div>
 			  </div>
       		</div>
-      		<div class="col s12 m4 l3">
-				<form action="#">
-				    <p>
-				    <input name="group1" type="radio" id="test1" />
-				    <label for="test1">Front End</label>
-				    </p>
-				    <p>
-				    <input name="group1" type="radio" id="test2" />
-				    <label for="test2">Back End</label>
-				    </p>
-				   	<p>
-				    <input name="group3" type="radio" id="test3" />
-				    <label for="test3">Full Stack</label>
-				    </p>
-				</form>
-    		</div>
 		</div>	
 	</div>
 	</div>

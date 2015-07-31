@@ -14,13 +14,16 @@
 h1, h3
 {
 	text-align: center;
-	color: white;
 /*	text-shadow: 3px 3px 3px #000;
 	margin: 0px;*/
 }
-#main
+body
 {
-	background-color:#394F73;
+	background-color:#FCE4EC;
+	height: 100vh;
+}
+#mid{
+
 }
 path {  stroke: #fff; }
 path:hover {  opacity:0.9; }
@@ -51,11 +54,6 @@ rect:hover {  fill:blue; }
     align:right;
     width:50px;
 }
-#map 
-{
-	width: 960px;
-	height: 500px;
-}
 svg 
 {
 	position: relative;
@@ -80,4 +78,18 @@ path:hover
 	background-color: rgba(220, 220, 220, 0.9);
 	padding: 5px;
 	border-radius: 2px;
+}
+#dashboard{
+	width: 1200px;
+}
+#graph{
+	width: 900px;
+	padding: 0px;
+	color:white;
+}
+#tab1{
+	padding: 0px;
+}
+.tabs{
+	padding-left: 40px;
 }
